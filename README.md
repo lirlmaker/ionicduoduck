@@ -1,0 +1,2 @@
+# ionicduoduck
+es pala ip
