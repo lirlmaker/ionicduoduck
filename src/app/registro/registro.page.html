@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>SOY EL REGISTRADOR </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h1>bienvenido</h1>
+
+  <form [formGroup]="formularioregistro" (keyup.enter)="guardar">
+    <ion-item>
+      <ion-input formControlName="name" label="name" placeholder="aqui el nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="apellido" label="apellido" placeholder="aqui el apellido"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-input formControlName="rut" label="rut" type="text" maxlength="10" placeholder="sin puntos y con guion 12345678-9 (por ahora)"></ion-input>
+
+    </ion-item> 
+    <ion-item>
+      <ion-input formControlName="carrera" label="carrera" placeholder="aqui la carrera"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-input type="password" (ionInput)="onPasswordInput($event)" pattern="\d{4}"  maxlength="4" formControlName="contra" label="contra" placeholder="aqui la contra"></ion-input>
+    </ion-item> 
+  </form>
+  
+  <ion-button (click)="guardar()" >registrado</ion-button>
+  <ion-button routerLink="/login">ahora al log</ion-button>
+  <ion-button >limpiar</ion-button>
+</ion-content>

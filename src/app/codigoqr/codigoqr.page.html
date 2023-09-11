@@ -1,0 +1,12 @@
+<div class="scanner-shell" [hidden]="!hasDevices">
+
+
+	<zxing-scanner #scanner start="true" [device]="currentDevice" (scanSuccess)="handleQrCodeResult($event)" [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']"></zxing-scanner>
+
+	<section class="results" *ngIf="qrResultString">
+		<small>Result</small>
+		<strong>{{ qrResultString}}</strong>
+	</section>
+
+</div>
+

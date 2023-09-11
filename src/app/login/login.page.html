@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start"></ion-buttons>
+      <ion-title>LOGIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content ion-content [fullscreen]="true" class="ion-padding">
+
+  <form action="">
+    <ion-item>
+      <ion-label position="floating">usuario</ion-label>
+      <ion-input formControlName="name" type="text" maxlength="8"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">contra</ion-label>
+      <ion-input formControlName="contra" type="password" (ionInput)="onPasswordInput($event)" pattern="\d{4}"  maxlength="4"></ion-input>
+    </ion-item>
+  </form>
+
+
+<ion-button (click)="ingresar()" routerLink="/home" class="ion-padding" color="primary">Pa dentro</ion-button>
+<ion-button routerLink="/registro" class="ion-padding" color="primary">registro</ion-button>
+<ion-button routerLink="/recuperar-contra" class="ion-padding" color="primary">olvidaste la contraseña?</ion-button>
+</ion-content>

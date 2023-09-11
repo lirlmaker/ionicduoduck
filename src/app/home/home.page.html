@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>SOY EL HOME </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h1>bienvenido</h1>
+  <h6>usuario nombre</h6>
+  <h2>informacion adicional</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="el name" placeholder="aqui el nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="el apellido" placeholder="aqui el apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="rut" placeholder="aqui el rut"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="nivel educacional" placeholder="eleccion">
+        <ion-select-option value="basico">basica</ion-select-option>
+        <ion-select-option value="media">media</ion-select-option>
+        <ion-select-option value="tecnica">tecnico</ion-select-option>
+        <ion-select-option value="universidad">universitaria</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    
+  </ion-list>
+  <ion-button routerLink="/codigoqr" class="ion-padding" color="primary">registrar qr</ion-button>
+  <ion-button routerLink="/login">cerrar sesion</ion-button>
+
+</ion-content>
